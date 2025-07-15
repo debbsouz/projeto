@@ -52,6 +52,8 @@ body * {
 }
 #profile img {
   width: 112px;
+  height: 112px;
+  border-radius: 50%;
 }
 #profile p {
   font-weight: 500;
@@ -59,11 +61,16 @@ body * {
   margin-top: 8px;
 }
 
+body.light #profile img {
+  border: 2px solid black;
+}
+
 /*switch */
 #switch {
   position: relative;
   width: 64px;
   margin: 4px auto;
+  margin-bottom: 24px;
 }
 
 #switch button {
