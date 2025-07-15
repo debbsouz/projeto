@@ -1,12 +1,15 @@
 function toggleMode() {
   const html = document.documentElement
-  html.classList.toggle("dark")
+  html.classList.toggle("light")
 
   const img = document.querySelector("#profile img")
+  const icon = document.querySelector("#switch button img")
 
-  if (html.classList.contains("dark")) {
-    img.setAttribute("src", "assets/avatar-light.png")
+  if (html.classList.contains("light")) {
+    icon.setAttribute("src", "assets/sun.svg")
+    icon.setAttribute("alt", "Ícone do sol para modo claro")
   } else {
-    img.setAttribute("src", "assets/avatar.png")
+    icon.setAttribute("src", "assets/moon-stars.svg")
+    icon.setAttribute("alt", "Ícone da lua para modo escuro")
   }
 }
