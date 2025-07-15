@@ -18,7 +18,7 @@ Criando meus primeiros projetos em HTML, CSS e JavaScript
 <br>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/debbsouz/projeto2/main/assets/.github/preview.jpg" alt="Preview do projeto" width="100%" />
+  <img src="assets/.github/preview.jpg" alt="Preview do projeto" width="100%" />
 </p>
 
 ## 🚀 Tecnologias
