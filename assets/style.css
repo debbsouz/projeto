@@ -1,0 +1,46 @@
+:root {
+  --text-color: black;
+  --bg-url: url(./bg-mobile.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.05);
+  --highlight-color: rgba(0, 0, 0, 0.2);
+  --switch-icon: url(./sun.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./bg-mobile.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.05);
+  --highlight-color: rgba(0, 0, 0, 0.2);
+  --switch-icon: url(./sun.svg);
+}
+
+.dark {
+  --text-color: white;
+  --bg-url: url(./bg-mobile-dark.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(255, 255, 255, 0.1);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-icon: url(./moon-stars.svg);
+}
+
+body {
+  background-image: var(--bg-url);
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+#switch button {
+  background: none;
+  border: none;
+}
+
+#switch img {
+  width: 24px;
+  height: 24px;
+}

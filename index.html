@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="">
+<html lang="pt-br" class="light">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,42 +11,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Primeiros Passos no Codigo</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Primeiros Passos no Código</title>
+    <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
     <div id="container">
+      <!-- Perfil -->
       <div id="profile">
-        <img src="./assets/avatar.png" alt="Foto de computador." />
+        <img src="assets/avatar.png" alt="Avatar de Dora" />
         <p>Dora Explora Codigo</p>
       </div>
 
+      <!-- Botão de tema -->
       <div id="switch" onclick="toggleMode()">
-        <button></button>
+        <button>
+          <img src="assets/sun.svg" alt="Ícone de tema" />
+        </button>
         <span></span>
       </div>
 
+      <!-- Links principais -->
       <ul>
         <li>
-          <a href="https://github.com/debbsouz">Veja meus projetos</a>
+          <a href="https://github.com/debbsouz" target="_blank"
+            >Veja meus projetos</a
+          >
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/deborasouzap/"
-            >Conect-se comigo no LinkedIn</a
-          >
+          <a href="https://www.linkedin.com/in/deborasouzap/" target="_blank">
+            Conecte-se comigo no LinkedIn
+          </a>
         </li>
         <li>
           <a
             href="https://open.spotify.com/playlist/4hqttcoBTAL0um9bsSSt9G?si=92c190104b964e38"
-            >Minha playlist favorita 🎵</a
+            target="_blank"
           >
+            Minha playlist favorita 🎵
+          </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/debbsouz/"
-            >Entre em contato comigo</a
-          >
+          <a href="https://www.instagram.com/debbsouz/" target="_blank">
+            Entre em contato comigo
+          </a>
         </li>
       </ul>
+
+      <!-- Ícones sociais -->
       <div id="social-links">
         <a href="https://github.com/debbsouz" target="_blank">
           <ion-icon name="logo-github"></ion-icon>
@@ -56,11 +67,7 @@
           <ion-icon name="logo-instagram"></ion-icon>
         </a>
 
-        <a
-          href="https://www.youtube.com/@DoraExploraCodigo
-      "
-          target="_blank"
-        >
+        <a href="https://www.youtube.com/@DoraExploraCodigo" target="_blank">
           <ion-icon name="logo-youtube"></ion-icon>
         </a>
 
@@ -69,9 +76,11 @@
         </a>
       </div>
 
+      <!-- Rodapé -->
       <footer>Coding my dreams into reality.</footer>
     </div>
 
+    <!-- Ionicons -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -81,6 +90,7 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <script src="./assets/script.js"></script>
+    <!-- Script do site -->
+    <script src="assets/script.js"></script>
   </body>
 </html>
