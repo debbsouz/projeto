@@ -4,44 +4,50 @@
   box-sizing: border-box;
 }
 
-:root {
+/* Variáveis para temas no elemento html */
+html {
   --text-color: white;
-  --bg-url: url(./bg-mobile.jpg);
+  --bg-url: url("./bg-mobile.jpg");
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --switch-bg-url: url(./moon-stars.svg);
+  --switch-bg-url: url("./moon-stars.svg");
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
-.light {
+html.light {
   --text-color: black;
-  --bg-url: url(./bg-mobile-light.jpg);
+  --bg-url: url("./bg-mobile-light.jpg");
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(./sun.svg);
+  --switch-bg-url: url("./assets/sun.svg");
 }
 
+/* Corpo da página */
 body {
-  background: var(--bg-url) no-repeat top center/cover;
-  height: 100vh;
-  font-family: "Inter", sans-serif;
+  background: var(--bg-url) no-repeat center center/cover;
   color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
+/* Todos os elementos herdam a cor do texto */
 body * {
   color: var(--text-color);
 }
 
+/* Container principal */
 #container {
-  width: 100%;
   max-width: 588px;
   margin: 56px auto 0;
   padding: 0 24px;
 }
 
+/* Perfil */
 #profile {
   text-align: center;
   padding: 24px;
@@ -51,17 +57,17 @@ body * {
   width: 112px;
   height: 112px;
   border-radius: 50%;
-  transition: border 0.3;
+  transition: border 0.3s ease;
+}
+
+html.light #profile img {
+  border: 2px solid black;
 }
 
 #profile p {
   font-weight: 500;
   line-height: 24px;
   margin-top: 8px;
-}
-
-.light #profile img {
-  border: 2px solid black;
 }
 
 /* Botão de switch */
@@ -75,23 +81,22 @@ body * {
   width: 32px;
   height: 32px;
   background: white var(--switch-bg-url) no-repeat center;
-  border: 0;
+  border: none;
   border-radius: 50%;
-
   position: absolute;
   top: 50%;
   left: 0;
-  z-index: 1;
   transform: translateY(-50%);
-
+  cursor: pointer;
+  z-index: 1;
   animation: slide-back 0.2s;
 }
 
-.light #switch button {
+html.light #switch button {
   animation: slide-in 0.2s forwards;
 }
 
-#switch button hover {
+#switch button:hover {
   outline: 8px solid var(--highlight-color);
 }
 
@@ -106,7 +111,7 @@ body * {
   border-radius: 9999px;
 }
 
-/* Links */
+/* Lista de links */
 ul {
   list-style: none;
   display: flex;
@@ -126,7 +131,7 @@ ul li a {
   -webkit-backdrop-filter: blur(4px);
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 }
 
 ul li a:hover {
@@ -134,7 +139,7 @@ ul li a:hover {
   border: 1.5px solid var(--text-color);
 }
 
-/* Social Links */
+/* Ícones sociais */
 #social-links {
   display: flex;
   justify-content: center;
@@ -148,30 +153,32 @@ ul li a:hover {
   align-items: center;
   justify-content: center;
   padding: 16px;
-  transition: background 0.2s;
+  transition: background 0.2s ease;
   border-radius: 50%;
 }
 
-#social-links:hover {
+#social-links a:hover {
   background: var(--highlight-color);
 }
 
-/* Footer */
+/* Rodapé */
 footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
 }
 
+/* Responsivo */
 @media (min-width: 700px) {
-  :root {
-    --bg-url: url(./assets/bg-desktop.jpg);
+  html {
+    --bg-url: url("./bg-desktop.jpg");
   }
-  .light {
-    --bg-url: url(./assets/bg-desktop-light.jpg);
+  html.light {
+    --bg-url: url("./bg-desktop-light.jpg");
   }
 }
 
+/* Animações do switch */
 @keyframes slide-in {
   from {
     left: 0;

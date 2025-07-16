@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="light">
+<html lang="pt-br" class="">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -24,10 +24,13 @@
         <p>Dora Explora Código</p>
       </div>
 
-      <!-- Botão de troca de tema corrigido -->
-      <div id="switch" onclick="toggleMode()">
-        <button></button>
-        <span></span>
+      <div id="switch">
+        <button onclick="toggleMode()">
+          <img
+            src="assets/moon-stars.svg"
+            alt="Ícone da lua para modo escuro"
+          /></button
+        ><span></span>
       </div>
 
       <!-- Links principais -->
@@ -79,7 +82,7 @@
 
     <!-- Ícones -->
     <script
-      type="module"
+      type="noModule"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
     <script
